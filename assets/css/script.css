@@ -41,6 +41,10 @@ h1 span {
 
 header {
   height: 60px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 header div {
@@ -323,6 +327,12 @@ h4 {
   display: flex;
   gap: 15px;
   overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.carrousel::-webkit-scrollbar {
+  display: none;
 }
 
 .one-activity {
@@ -384,22 +394,22 @@ h4 {
   border-bottom-left-radius: 10%;
 }
 
-.one-activity a {
+h5 {
   font-family: TS-Med, sans-serif;
-  text-decoration: none;
-  color: black;
   font-size: 18px;
+}
+
+.one-activity h5:hover {
+  text-decoration: underline;
 }
 
 .one-activity:hover {
   .thepic {
     opacity: 0.8;
   }
-
-  .one-activity a {
-    background-color: red;
+  h5 {
+    text-decoration: underline;
   }
-
   cursor: pointer;
 }
 
@@ -426,6 +436,7 @@ h4 {
 .ratings > p {
   font-size: 12px;
   color: #545454;
+  padding-top: 3px;
 }
 
 .one-activity > p {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trip Advisor</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/script.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/font.css" />
     <script
       src="https://kit.fontawesome.com/55acf8501b.js"
@@ -13,8 +13,15 @@
     ></script>
   </head>
   <body>
+    <div class="modal" class=""></div>
+    <div class="parent-form">
+      <div class="form-container">
+        <form id="contactForm"></form>
+      </div>
+    </div>
     <header>
       <div class="container">
+        <div class="bars"><i class="fa-solid fa-bars"></i></div>
         <a href="https://www.tripadvisor.fr/" target="_blank"
           ><img
             class="logo-trip"
@@ -35,7 +42,8 @@
             <i class="fa-solid fa-bell"></i>
             <span>Alertes</span>
           </div>
-          <button class="login">Connectez-vous></button>
+          <button class="login">Connectez-vous</button>
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
           <div>
             <i class="fa-solid fa-cart-shopping"></i>
             <span>Panier</span>
@@ -51,29 +59,42 @@
           page : <a href="">en savoir plus</a>.
         </p>
         <nav class="main-menu">
-          <div>
-            <p>Hôtels</p>
-            <i class="fa-solid fa-bed"></i>
+          <div class="first-line">
+            <div class="seen-menu">
+              <p>Hôtels</p>
+              <i class="fa-solid fa-bed"></i>
+            </div>
+            <div class="seen-menu">
+              <p>Locations de vacances</p>
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="seen-menu">
+              <p>Activités</p>
+              <i class="fa-solid fa-ticket"></i>
+            </div>
+            <div class="seen-menu">
+              <p>Restaurants</p>
+              <i class="fa-solid fa-utensils"></i>
+            </div>
           </div>
-          <div>
-            <p>Locations de vacances</p>
-            <i class="fa-solid fa-house"></i>
-          </div>
-          <div>
-            <p>Activités</p>
-            <i class="fa-solid fa-ticket"></i>
-          </div>
-          <div>
-            <p>Restaurants</p>
-            <i class="fa-solid fa-utensils"></i>
-          </div>
-          <div>
-            <p>Forums de voyage</p>
-            <i class="fa-solid fa-message"></i>
-          </div>
-          <div>
-            <p>Plus</p>
-            <i class="fa-solid fa-ellipsis"></i>
+          <div class="second-line">
+            <div class="seen-menu">
+              <p>Forums de voyage</p>
+              <i class="fa-solid fa-message"></i>
+            </div>
+
+            <nav class="hidden-menu">
+              <p>Vols</p>
+              <i class="fa-solid fa-plane"></i>
+            </nav>
+            <nav class="hidden-menu">
+              <p>Croisières</p>
+              <i class="fa-solid fa-ship"></i>
+            </nav>
+            <div class="seen-menu">
+              <p>Plus</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
           </div>
         </nav>
         <div class="main-photos">
@@ -235,14 +256,18 @@
 
             <div class="one-activity">
               <div class="photo-activity">
-                <img class="thepic" src="./assets/img/eiffeltoren.jpg" alt="" />
+                <img
+                  class="thepic"
+                  src="./assets/img/vue-de-la-cour-d-honneur.jpg"
+                  alt=""
+                />
                 <button><i class="fa-regular fa-heart"></i></button>
                 <div class="small-logo">
                   <img src="./assets/img/TC LOGO_2024.webp" alt="" />
                 </div>
               </div>
 
-              <h5>Tour Eiffel</h5>
+              <h5>Musée Rodin</h5>
               <div class="ratings">
                 <ul>
                   <li><i class="fa-solid fa-circle"></i></li>
@@ -251,70 +276,102 @@
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle-half-stroke"></i></li>
                 </ul>
-                <p>100000</p>
+                <p>187 890</p>
               </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
-              </p>
+              <p>Musées spécialisés</p>
             </div>
             <div class="one-activity">
               <div class="photo-activity">
-                <img class="thepic" src="./assets/img/eiffeltoren.jpg" alt="" />
+                <img
+                  class="thepic"
+                  src="./assets/img/the-amazingly-detailed.jpg"
+                  alt=""
+                />
                 <button><i class="fa-regular fa-heart"></i></button>
                 <div class="small-logo">
                   <img src="./assets/img/TC LOGO_2024.webp" alt="" />
                 </div>
               </div>
 
-              <h5>Tour Eiffel</h5>
+              <h5>Cathédrale Nore-Dame de Paris</h5>
               <div class="ratings">
                 <ul>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  <li><i class="fa-solid fa-circle"></i></li>
                 </ul>
-                <p>100000</p>
+                <p>139 901</p>
               </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
-              </p>
+              <p>Bâtiments architecturaux, Sites historiques</p>
             </div>
             <div class="one-activity">
               <div class="photo-activity">
-                <img class="thepic" src="./assets/img/eiffeltoren.jpg" alt="" />
+                <img
+                  class="thepic"
+                  src="./assets/img/the-bookstore.jpg"
+                  alt=""
+                />
                 <button><i class="fa-regular fa-heart"></i></button>
                 <div class="small-logo">
                   <img src="./assets/img/TC LOGO_2024.webp" alt="" />
                 </div>
               </div>
 
-              <h5>Tour Eiffel</h5>
+              <h5>Librairie Shakespeare and Company</h5>
               <div class="ratings">
                 <ul>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  <li><i class="fa-solid fa-circle"></i></li>
                 </ul>
-                <p>100000</p>
+                <p>140 321</p>
               </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
-              </p>
+              <p>Bibliothèques, Grands magasins</p>
             </div>
             <div class="one-activity">
               <div class="photo-activity">
-                <img class="thepic" src="./assets/img/eiffeltoren.jpg" alt="" />
+                <img
+                  class="thepic"
+                  src="./assets/img/20180601-122841-largejpg.jpg"
+                  alt=""
+                />
                 <button><i class="fa-regular fa-heart"></i></button>
                 <div class="small-logo">
                   <img src="./assets/img/TC LOGO_2024.webp" alt="" />
                 </div>
               </div>
 
-              <h5>Tour Eiffel</h5>
+              <h5>Musée d'Orsay</h5>
+              <div class="ratings">
+                <ul>
+                  <li><i class="fa-solid fa-circle"></i></li>
+                  <li><i class="fa-solid fa-circle"></i></li>
+                  <li><i class="fa-solid fa-circle"></i></li>
+                  <li><i class="fa-solid fa-circle"></i></li>
+                  <li><i class="fa-solid fa-circle"></i></li>
+                </ul>
+                <p>67 674</p>
+              </div>
+              <p>Musées d'art</p>
+            </div>
+            <div class="one-activity">
+              <div class="photo-activity">
+                <img
+                  class="thepic"
+                  src="./assets/img/marche-vernaison-maison.jpg"
+                  alt=""
+                />
+                <button><i class="fa-regular fa-heart"></i></button>
+                <div class="small-logo">
+                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                </div>
+              </div>
+
+              <h5>Marché aux Puces de Saint-Ouen</h5>
               <div class="ratings">
                 <ul>
                   <li><i class="fa-solid fa-circle"></i></li>
@@ -323,11 +380,9 @@
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle-half-stroke"></i></li>
                 </ul>
-                <p>100000</p>
+                <p>103 495</p>
               </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
-              </p>
+              <p>Antiquaires, Marchés aux puces & Marchés de rue Saint-Ouen</p>
             </div>
           </div>
         </div>
@@ -412,62 +467,58 @@
 
             <div class="one-activity">
               <div class="photo-activity">
-                <img class="thepic" src="./assets/img/eiffeltoren.jpg" alt="" />
+                <img class="thepic" src="./assets/img/meal3.jpg" alt="" />
                 <button><i class="fa-regular fa-heart"></i></button>
                 <div class="small-logo">
                   <img src="./assets/img/TC LOGO_2024.webp" alt="" />
                 </div>
               </div>
 
-              <h5>Tour Eiffel</h5>
+              <h5>ASPIC</h5>
               <div class="ratings">
                 <ul>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  <li><i class="fa-regular fa-circle"></i></li>
                 </ul>
-                <p>100000</p>
+                <p>2 981</p>
               </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
-              </p>
+              <p>€€€€ · Française, Européenne, Saine</p>
             </div>
             <div class="one-activity">
               <div class="photo-activity">
-                <img class="thepic" src="./assets/img/eiffeltoren.jpg" alt="" />
+                <img class="thepic" src="./assets/img/meal2.jpg" alt="" />
                 <button><i class="fa-regular fa-heart"></i></button>
                 <div class="small-logo">
                   <img src="./assets/img/TC LOGO_2024.webp" alt="" />
                 </div>
               </div>
 
-              <h5>Tour Eiffel</h5>
+              <h5>Bistrot chic</h5>
               <div class="ratings">
                 <ul>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  <li><i class="fa-solid fa-circle"></i></li>
                 </ul>
-                <p>100000</p>
+                <p>1 345</p>
               </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
-              </p>
+              <p>€€€ · Française, Européenne, Saine, Moderne</p>
             </div>
             <div class="one-activity">
               <div class="photo-activity">
-                <img class="thepic" src="./assets/img/eiffeltoren.jpg" alt="" />
+                <img class="thepic" src="./assets/img/meal1.jpg" alt="" />
                 <button><i class="fa-regular fa-heart"></i></button>
                 <div class="small-logo">
                   <img src="./assets/img/TC LOGO_2024.webp" alt="" />
                 </div>
               </div>
 
-              <h5>Tour Eiffel</h5>
+              <h5>Vive les huîtres</h5>
               <div class="ratings">
                 <ul>
                   <li><i class="fa-solid fa-circle"></i></li>
@@ -476,11 +527,9 @@
                   <li><i class="fa-solid fa-circle"></i></li>
                   <li><i class="fa-solid fa-circle-half-stroke"></i></li>
                 </ul>
-                <p>100000</p>
+                <p>4 340</p>
               </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
-              </p>
+              <p>€€€€ · Française, Moderne, Bar à vins</p>
             </div>
           </div>
         </div>

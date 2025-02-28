@@ -5,10 +5,10 @@
 /* COMMON RULES */
 
 .container {
-  width: 1135px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 1135px;
 }
 
 body {
@@ -27,7 +27,41 @@ h1 span {
   color: #fe5d5d;
 }
 
+/* MODAL */
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 4;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.parent-form {
+  position: fixed;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  height: 578px;
+  width: 484px;
+  background-color: white;
+  position: fixed;
+  z-index: 5;
+  border-radius: 20px;
+}
+
 /* HEADER */
+
+.bars {
+  display: none;
+}
 
 .logo-trip {
   width: 200px;
@@ -67,6 +101,10 @@ header div {
   padding: 10px;
 }
 
+.menu div:nth-child(5) {
+  display: none;
+}
+
 .menu div:not(.login):hover {
   background-color: #f2f2f2;
   padding: 10px;
@@ -92,6 +130,9 @@ header div {
   color: white;
 }
 
+.search-icon {
+  display: none;
+}
 /* MAIN */
 
 .undertitle {
@@ -110,9 +151,20 @@ header div {
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
-.main-menu div {
+.first-line {
+  display: flex;
+  gap: 13.75px;
+}
+
+.second-line {
+  display: flex;
+  gap: 13.75px;
+}
+
+.seen-menu {
   height: 64px;
   width: 171px;
   border: 1px solid black;
@@ -120,9 +172,16 @@ header div {
   padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.main-menu div:hover {
+.seen-menu:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden-menu:hover {
   background-color: black;
   color: white;
   cursor: pointer;
@@ -132,9 +191,18 @@ header div {
   font-weight: bold;
 }
 
+.hidden-menu div p {
+  font-weight: bold;
+}
+
+.hidden-menu {
+  display: none;
+}
+
 /* PHOTOS */
 
 .main-photos {
+  /* border: #04a96c 2px solid; */
   margin-top: 30px;
   height: 430px;
   display: flex;
@@ -167,7 +235,7 @@ header div {
 }
 
 .last-pics {
-  width: 480px;
+  width: 45%;
 }
 
 .up-pic {
@@ -208,6 +276,7 @@ header div {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+  gap: 100px;
 }
 
 .summary {
@@ -294,7 +363,7 @@ h3 {
 
 .activities-intro {
   /* border: 2px solid green; */
-  width: 240px;
+  width: 22%;
   flex-shrink: 0;
 }
 
@@ -337,16 +406,19 @@ h4 {
 
 .one-activity {
   /* border: 2px solid purple; */
-  width: 255px;
+  width: 32%;
   flex-shrink: 0;
+  /* border: #04a96c 2px solid; */
 }
 
 .photo-activity {
-  height: 190px;
-  width: 255px;
+  height: 60%;
+  width: 100%;
   /* border: 2px solid yellow; */
   position: relative;
   margin-bottom: 10px;
+  /* border: #fe5d5d solid 2px; */
+  flex: 1;
 }
 
 .photo-activity img {
@@ -453,15 +525,21 @@ h5 {
   margin-top: 40px;
 }
 
+.articles::-webkit-scrollbar {
+  display: none;
+}
+
 .one-article {
   /* border: 2px solid blue; */
   margin-bottom: 100px;
+  width: 33%;
+  flex-shrink: 0;
 }
 
 .article-pic {
   /* border: 2px solid yellow; */
-  height: 274px;
-  width: 355px;
+  height: 70%;
+  width: 100%;
 }
 
 .title {
@@ -533,4 +611,251 @@ footer div p a {
   text-decoration: none;
   color: black;
   font-family: TS-Med, sans-serif;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1184px) {
+  /* MAIN NAV */
+
+  .hidden-menu {
+    display: contents;
+    height: 50px;
+    width: 272px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-menu {
+    flex-direction: column;
+  }
+
+  .seen-menu {
+    width: 272px;
+    height: 50px;
+  }
+
+  /* PHOTOS */
+
+  .main-photos {
+    height: 370px;
+    max-width: 1135px;
+  }
+
+  .last-pics {
+    width: 412px;
+  }
+
+  /* CARROUSEL */
+
+  .activities {
+    max-width: 1135px;
+  }
+
+  .one-activity {
+    width: 31%;
+  }
+}
+
+/* ----------------------------- */
+
+@media (max-width: 1024px) {
+  /* HEADER */
+
+  .menu div span {
+    display: none;
+  }
+
+  /* PHOTOS */
+
+  .main-photos {
+    height: 274px;
+  }
+  .last-pics {
+    width: 30%;
+  }
+
+  /* INTRODUCTION */
+
+  .introduction {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .summary {
+    width: 100%;
+  }
+
+  .right-pics {
+    display: flex;
+    /* border: 2px solid black; */
+    height: 282px;
+  }
+
+  .organize {
+    width: 50%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    height: 100%;
+  }
+
+  .map {
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid green; */
+  }
+
+  .map img {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* CARROUSEL */
+
+  .one-activity {
+    width: 40%;
+  }
+
+  /* GUIDES */
+
+  .articles {
+    max-width: 1135px;
+  }
+
+  .one-article {
+    width: 40%;
+  }
+}
+
+/* -------------------------------- */
+
+@media (max-width: 768px) {
+  /* HEADER */
+
+  .bars {
+    display: contents;
+    font-size: 20px;
+  }
+  .menu button {
+    display: none;
+  }
+
+  .menu div:nth-child(5) {
+    display: contents;
+    display: flex;
+  }
+
+  .menu {
+    gap: 0px;
+  }
+
+  .menu div:not(:nth-child(5)):not(:last-child) {
+    display: none;
+  }
+
+  .logo-trip {
+    width: 132px;
+    height: 39px;
+    object-fit: cover;
+    padding-top: 3px;
+  }
+
+  /* MAIN NAV */
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .main-menu {
+    flex-direction: row;
+    overflow: scroll;
+    justify-content: space-between;
+    gap: 108px;
+  }
+
+  .main-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .seen-menu {
+    flex-shrink: 0;
+    gap: 15px;
+    width: auto;
+  }
+
+  .hidden-menu {
+    width: auto;
+    gap: 15px;
+  }
+
+  /* PHOTOS */
+
+  .last-pics {
+    display: none;
+  }
+
+  .main-photos {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .second-menu {
+    display: none;
+  }
+
+  /* INTRODUCTION */
+
+  .summary p {
+    font-size: 16px;
+  }
+
+  .right-pics {
+    flex-direction: column;
+    margin-bottom: 50px;
+    height: 40%;
+    /* border: 2px solid black; */
+  }
+
+  .organize {
+    width: 100%;
+    height: 55%;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+  }
+
+  .map {
+    width: 100%;
+    height: 200px;
+  }
+
+  .map img {
+    border-top-right-radius: 0px;
+  }
+
+  /* CARROUSEL */
+
+  .activities {
+    flex-direction: column;
+  }
+
+  .activities-intro {
+    width: 100%;
+  }
+
+  .one-activity {
+    width: 70%;
+  }
+
+  .photo-activity {
+    height: 75%;
+  }
+
+  .one-article {
+    width: 60%;
+  }
 }

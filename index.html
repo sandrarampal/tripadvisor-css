@@ -7,587 +7,634 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/font.css" />
+    <script src="./assets/js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/55acf8501b.js"
       crossorigin="anonymous"
     ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
   </head>
   <body>
-    <div class="modal" class=""></div>
-    <div class="parent-form">
-      <div class="form-container">
-        <form id="contactForm"></form>
+    <div class="hide" id="form-appear">
+      <div class="modal"></div>
+      <div class="parent-form">
+        <div class="form-container">
+          <div class="close">
+            <button class="close-button">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <form id="contactForm">
+            <p>Formulaire de contact</p>
+            <input
+              type="text"
+              name="firstname"
+              placeholder="Prénom"
+              id="firstname"
+            />
+            <input
+              type="text"
+              name="lastname"
+              placeholder="Nom"
+              id="lastname"
+            />
+            <input type="email" name="email" placeholder="Email" id="email" />
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              cols="30"
+              placeholder="Écrivez ici votre message..."
+            ></textarea>
+            <button class="send" type="submit">Envoyez le formulaire</button>
+          </form>
+        </div>
       </div>
     </div>
-    <header>
-      <div class="container">
-        <div class="bars"><i class="fa-solid fa-bars"></i></div>
-        <a href="https://www.tripadvisor.fr/" target="_blank"
-          ><img
-            class="logo-trip"
-            src="./assets/img/Tripadvisor-Logo.png"
-            alt="logo de TripAdvisor"
-        /></a>
+    <div class="to-fixed">
+      <header>
+        <div class="container">
+          <div class="bars"><i class="fa-solid fa-bars"></i></div>
+          <a href="https://www.tripadvisor.fr/" target="_blank"
+            ><img
+              class="logo-trip"
+              src="./assets/img/Tripadvisor-Logo.png"
+              alt="logo de TripAdvisor"
+          /></a>
 
-        <nav class="menu">
-          <div>
-            <i class="fa-solid fa-pencil"></i>
-            <span>Avis</span>
-          </div>
-          <div>
-            <i class="fa-solid fa-heart"></i>
-            <span>Voyages</span>
-          </div>
-          <div>
-            <i class="fa-solid fa-bell"></i>
-            <span>Alertes</span>
-          </div>
-          <button class="login">Connectez-vous</button>
-          <div><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>Panier</span>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main class="container">
-      <div>
-        <h1><span>Explorez </span>Paris</h1>
-        <p class="undertitle">
-          Les revenus influencent le choix des expériences présentées sur cette
-          page : <a href="">en savoir plus</a>.
-        </p>
-        <nav class="main-menu">
-          <div class="first-line">
-            <div class="seen-menu">
-              <p>Hôtels</p>
-              <i class="fa-solid fa-bed"></i>
+          <nav class="menu">
+            <div>
+              <i class="fa-solid fa-pencil"></i>
+              <span>Avis</span>
             </div>
-            <div class="seen-menu">
-              <p>Locations de vacances</p>
-              <i class="fa-solid fa-house"></i>
+            <div>
+              <i class="fa-solid fa-heart"></i>
+              <span>Voyages</span>
             </div>
-            <div class="seen-menu">
-              <p>Activités</p>
-              <i class="fa-solid fa-ticket"></i>
+            <div>
+              <i class="fa-solid fa-bell"></i>
+              <span>Alertes</span>
             </div>
-            <div class="seen-menu">
-              <p>Restaurants</p>
-              <i class="fa-solid fa-utensils"></i>
+            <button class="login">Connectez-vous</button>
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Panier</span>
             </div>
-          </div>
-          <div class="second-line">
-            <div class="seen-menu">
-              <p>Forums de voyage</p>
-              <i class="fa-solid fa-message"></i>
-            </div>
-
-            <nav class="hidden-menu">
-              <p>Vols</p>
-              <i class="fa-solid fa-plane"></i>
-            </nav>
-            <nav class="hidden-menu">
-              <p>Croisières</p>
-              <i class="fa-solid fa-ship"></i>
-            </nav>
-            <div class="seen-menu">
-              <p>Plus</p>
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-          </div>
-        </nav>
-        <div class="main-photos">
-          <div class="first-pic">
-            <img src="./assets/img/view.jpg" alt="" />
-          </div>
-          <div class="last-pics">
-            <div class="up-pic">
-              <img
-                class="first-right"
-                src="./assets/img/caption-8.jpg"
-                alt=""
-              />
-            </div>
-            <div class="bottom-pic">
-              <img
-                class="second-right"
-                src="./assets/img/caption-9.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+          </nav>
         </div>
-        <nav class="second-menu">
-          <div>
-            <a href="">Europe</a>
-            <p>></p>
-            <a href="">France</a>
-            <p>></p>
-            <a href="">Île-de-France</a>
-            <p>></p>
-            <a href="">Paris</a>
-            <i class="fa-regular fa-square-caret-down"></i>
+      </header>
+      <main class="container">
+        <div>
+          <h1><span>Explorez </span>Paris</h1>
+          <p class="undertitle">
+            Les revenus influencent le choix des expériences présentées sur
+            cette page : <a href="">en savoir plus</a>.
+          </p>
+          <nav class="main-menu">
+            <div class="first-line">
+              <div class="seen-menu">
+                <p>Hôtels</p>
+                <i class="fa-solid fa-bed"></i>
+              </div>
+              <div class="seen-menu">
+                <p>Locations de vacances</p>
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div class="seen-menu">
+                <p>Activités</p>
+                <i class="fa-solid fa-ticket"></i>
+              </div>
+              <div class="seen-menu">
+                <p>Restaurants</p>
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+            </div>
+            <div class="second-line">
+              <div class="seen-menu">
+                <p>Forums de voyage</p>
+                <i class="fa-solid fa-message"></i>
+              </div>
+
+              <nav class="hidden-menu">
+                <p>Vols</p>
+                <i class="fa-solid fa-plane"></i>
+              </nav>
+              <nav class="hidden-menu">
+                <p>Croisières</p>
+                <i class="fa-solid fa-ship"></i>
+              </nav>
+              <div class="seen-menu">
+                <p>Plus</p>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+          </nav>
+          <div class="main-photos">
+            <div class="first-pic">
+              <img src="./assets/img/view.jpg" alt="" />
+            </div>
+            <div class="last-pics">
+              <div class="up-pic">
+                <img
+                  class="first-right"
+                  src="./assets/img/caption-8.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="bottom-pic">
+                <img
+                  class="second-right"
+                  src="./assets/img/caption-9.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
-          <p>Visiter : Paris</p>
-        </nav>
-        <div class="introduction">
-          <div class="summary">
-            <h2>La Ville Lumière éblouit en tous points</h2>
-            <p>
-              Aucun autre endroit au monde ne fait autant rêver que Paris. La
-              ville séduit par son art, son architecture, sa culture et sa
-              cuisine, mais il y a aussi des merveilles plus discrètes qui
-              n’attendent qu’à être explorées : les ruelles pavées pittoresques,
-              les pâtisseries au coin de la rue et les petits bistrots douillets
-              qui vous invitent à boire un verre de beaujolais. Préparez-vous à
-              vous approprier Paris.
-            </p>
-          </div>
-          <div class="right-pics">
-            <div class="organize">
-              <h3>Paris : commencez à organiser !</h3>
+          <nav class="second-menu">
+            <div>
+              <a href="">Europe</a>
+              <p>></p>
+              <a href="">France</a>
+              <p>></p>
+              <a href="">Île-de-France</a>
+              <p>></p>
+              <a href="">Paris</a>
+              <i class="fa-regular fa-square-caret-down"></i>
+            </div>
+            <p>Visiter : Paris</p>
+          </nav>
+          <div class="introduction">
+            <div class="summary">
+              <h2>La Ville Lumière éblouit en tous points</h2>
               <p>
-                Créez un voyage pour enregistrer et organiser toutes vos idées
-                et les visualiser sur une carte.
+                Aucun autre endroit au monde ne fait autant rêver que Paris. La
+                ville séduit par son art, son architecture, sa culture et sa
+                cuisine, mais il y a aussi des merveilles plus discrètes qui
+                n’attendent qu’à être explorées : les ruelles pavées
+                pittoresques, les pâtisseries au coin de la rue et les petits
+                bistrots douillets qui vous invitent à boire un verre de
+                beaujolais. Préparez-vous à vous approprier Paris.
               </p>
-              <button>Créez un voyage</button>
             </div>
-            <div class="map">
-              <img src="./assets/img/maps_cnuhsr.png" alt="" />
+            <div class="right-pics">
+              <div class="organize">
+                <h3>Paris : commencez à organiser !</h3>
+                <p>
+                  Créez un voyage pour enregistrer et organiser toutes vos idées
+                  et les visualiser sur une carte.
+                </p>
+                <button>Créez un voyage</button>
+              </div>
+              <div class="map">
+                <img src="./assets/img/maps_cnuhsr.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <section class="immanquables">
-        <h2>Paris : les immanquables</h2>
+        <section class="immanquables">
+          <h2>Paris : les immanquables</h2>
 
-        <div class="activities">
-          <div class="activities-intro">
-            <h4>Se divertir</h4>
-            <p>
-              Des lieux à voir, des rues à explorer et des expériences
-              emblématiques à Paris.
-            </p>
-            <a href="">Tout afficher</a>
-          </div>
-          <div class="carrousel">
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img class="thepic" src="./assets/img/eiffeltoren.jpg" alt="" />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
+          <div class="activities">
+            <div class="activities-intro">
+              <h4>Se divertir</h4>
+              <p>
+                Des lieux à voir, des rues à explorer et des expériences
+                emblématiques à Paris.
+              </p>
+              <a href="">Tout afficher</a>
+            </div>
+            <div class="carrousel">
+              <div class="one-activity">
+                <div class="photo-activity">
                   <img
-                    class="logotrip"
-                    src="./assets/img/TC LOGO_2024.webp"
+                    class="thepic"
+                    src="./assets/img/eiffeltoren.jpg"
                     alt=""
                   />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img
+                      class="logotrip"
+                      src="./assets/img/TC LOGO_2024.webp"
+                      alt=""
+                    />
+                  </div>
                 </div>
+
+                <h5>Tour Eiffel</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  </ul>
+                  <p>139 901</p>
+                </div>
+                <p>
+                  Tours et plateformes d'observation, Monuments & Points
+                  d'intérêt
+                </p>
               </div>
 
-              <h5>Tour Eiffel</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
-                </ul>
-                <p>139 901</p>
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img
+                    class="thepic"
+                    src="./assets/img/arc-de-triomphe-at-night.jpg"
+                    alt=""
+                  />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Arc de Triomphe</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-regular fa-circle"></i></li>
+                  </ul>
+                  <p>56 875</p>
+                </div>
+                <p>
+                  Tours et plateformes d'observation, Monuments & Points
+                  d'intérêt
+                </p>
               </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
+
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img class="thepic" src="./assets/img/louvre.jpg" alt="" />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Musée du Louvre</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  </ul>
+                  <p>100 845</p>
+                </div>
+                <p>Bâtiments architecturaux, Musées d'art</p>
+              </div>
+
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img
+                    class="thepic"
+                    src="./assets/img/vue-de-la-cour-d-honneur.jpg"
+                    alt=""
+                  />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Musée Rodin</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  </ul>
+                  <p>187 890</p>
+                </div>
+                <p>Musées spécialisés</p>
+              </div>
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img
+                    class="thepic"
+                    src="./assets/img/the-amazingly-detailed.jpg"
+                    alt=""
+                  />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Cathédrale Nore-Dame de Paris</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                  </ul>
+                  <p>139 901</p>
+                </div>
+                <p>Bâtiments architecturaux, Sites historiques</p>
+              </div>
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img
+                    class="thepic"
+                    src="./assets/img/the-bookstore.jpg"
+                    alt=""
+                  />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Librairie Shakespeare and Company</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                  </ul>
+                  <p>140 321</p>
+                </div>
+                <p>Bibliothèques, Grands magasins</p>
+              </div>
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img
+                    class="thepic"
+                    src="./assets/img/20180601-122841-largejpg.jpg"
+                    alt=""
+                  />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Musée d'Orsay</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                  </ul>
+                  <p>67 674</p>
+                </div>
+                <p>Musées d'art</p>
+              </div>
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img
+                    class="thepic"
+                    src="./assets/img/marche-vernaison-maison.jpg"
+                    alt=""
+                  />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Marché aux Puces de Saint-Ouen</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  </ul>
+                  <p>103 495</p>
+                </div>
+                <p>
+                  Antiquaires, Marchés aux puces & Marchés de rue Saint-Ouen
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RESTAURANTS -->
+
+          <div class="activities">
+            <div class="activities-intro">
+              <h4>Se restaurer</h4>
+              <p>Bistrots et bars typiques, et plus encore à Paris.</p>
+              <a href="">Tout afficher</a>
+            </div>
+            <div class="carrousel">
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img class="thepic" src="./assets/img/meal6.jpg" alt="" />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Frenchie</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  </ul>
+                  <p>1274</p>
+                </div>
+                <p>
+                  €€€€ · Française, Végétariens bienvenus, Plats sans gluten
+                </p>
+              </div>
+
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img class="thepic" src="./assets/img/meal5.jpg" alt="" />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>114 Faubourg</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                    <li><i class="fa-regular fa-circle"></i></li>
+                  </ul>
+                  <p>1754</p>
+                </div>
+                <p>€€ · Française, Européenne, Végétariens bienvenus</p>
+              </div>
+
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img class="thepic" src="./assets/img/meal4.jpg" alt="" />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Verjus</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-regular fa-circle"></i></li>
+                  </ul>
+                  <p>545</p>
+                </div>
+                <p>€€€ · Française, Européenne, Moderne</p>
+              </div>
+
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img class="thepic" src="./assets/img/meal3.jpg" alt="" />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>ASPIC</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                    <li><i class="fa-regular fa-circle"></i></li>
+                  </ul>
+                  <p>2 981</p>
+                </div>
+                <p>€€€€ · Française, Européenne, Saine</p>
+              </div>
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img class="thepic" src="./assets/img/meal2.jpg" alt="" />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Bistrot chic</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                  </ul>
+                  <p>1 345</p>
+                </div>
+                <p>€€€ · Française, Européenne, Saine, Moderne</p>
+              </div>
+              <div class="one-activity">
+                <div class="photo-activity">
+                  <img class="thepic" src="./assets/img/meal1.jpg" alt="" />
+                  <button><i class="fa-regular fa-heart"></i></button>
+                  <div class="small-logo">
+                    <img src="./assets/img/TC LOGO_2024.webp" alt="" />
+                  </div>
+                </div>
+
+                <h5>Vive les huîtres</h5>
+                <div class="ratings">
+                  <ul>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle"></i></li>
+                    <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+                  </ul>
+                  <p>4 340</p>
+                </div>
+                <p>€€€€ · Française, Moderne, Bar à vins</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="guides">
+          <h2>Guides de voyageurs</h2>
+          <div class="articles">
+            <div class="one-article">
+              <div class="article-pic">
+                <img src="./assets/img/visit1.jpg" alt="" />
+              </div>
+              <p class="title">Best summer things to do in Paris | Eatwith</p>
+              <p class="number-articles">36 articles</p>
+              <div class="author">
+                <img src="./assets/img/forks-icon.jpg" alt="" />
+                <p>Par <span>Eatwith</span></p>
+              </div>
+            </div>
+            <div class="one-article">
+              <div class="article-pic">
+                <img src="./assets/img/visit2.jpg" alt="" />
+              </div>
+              <p class="title">Les 10 monuments et musées de Paris à faire</p>
+              <p class="number-articles">10 articles</p>
+              <div class="author">
+                <img class="topito" src="./assets/img/topito-com.jpg" alt="" />
+                <p>Par <span>Topito</span></p>
+              </div>
+            </div>
+            <div class="one-article">
+              <div class="article-pic">
+                <img src="./assets/img/visit3.jpg" alt="" />
+              </div>
+              <p class="title">
+                Top 10 des choses à faire ou à voir dans le 14ème
               </p>
-            </div>
-
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img
-                  class="thepic"
-                  src="./assets/img/arc-de-triomphe-at-night.jpg"
-                  alt=""
-                />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
+              <p class="number-articles">10 articles</p>
+              <div class="author">
+                <img class="topito" src="./assets/img/topito-com.jpg" alt="" />
+                <p>Par <span>Topito</span></p>
               </div>
-
-              <h5>Arc de Triomphe</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-regular fa-circle"></i></li>
-                </ul>
-                <p>56 875</p>
-              </div>
-              <p>
-                Tours et plateformes d'observation, Monuments & Points d'intérêt
-              </p>
-            </div>
-
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img class="thepic" src="./assets/img/louvre.jpg" alt="" />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Musée du Louvre</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
-                </ul>
-                <p>100 845</p>
-              </div>
-              <p>Bâtiments architecturaux, Musées d'art</p>
-            </div>
-
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img
-                  class="thepic"
-                  src="./assets/img/vue-de-la-cour-d-honneur.jpg"
-                  alt=""
-                />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Musée Rodin</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
-                </ul>
-                <p>187 890</p>
-              </div>
-              <p>Musées spécialisés</p>
-            </div>
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img
-                  class="thepic"
-                  src="./assets/img/the-amazingly-detailed.jpg"
-                  alt=""
-                />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Cathédrale Nore-Dame de Paris</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                </ul>
-                <p>139 901</p>
-              </div>
-              <p>Bâtiments architecturaux, Sites historiques</p>
-            </div>
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img
-                  class="thepic"
-                  src="./assets/img/the-bookstore.jpg"
-                  alt=""
-                />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Librairie Shakespeare and Company</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                </ul>
-                <p>140 321</p>
-              </div>
-              <p>Bibliothèques, Grands magasins</p>
-            </div>
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img
-                  class="thepic"
-                  src="./assets/img/20180601-122841-largejpg.jpg"
-                  alt=""
-                />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Musée d'Orsay</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                </ul>
-                <p>67 674</p>
-              </div>
-              <p>Musées d'art</p>
-            </div>
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img
-                  class="thepic"
-                  src="./assets/img/marche-vernaison-maison.jpg"
-                  alt=""
-                />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Marché aux Puces de Saint-Ouen</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
-                </ul>
-                <p>103 495</p>
-              </div>
-              <p>Antiquaires, Marchés aux puces & Marchés de rue Saint-Ouen</p>
             </div>
           </div>
+        </section>
+      </main>
+      <footer>
+        <div>
+          <img src="./assets/img/TRIP-2af5b8e6.png" alt="" />
+          <p>
+            Made at
+            <a href="https://www.lereacteur.io/" target="_blank">Le Reacteur</a>
+            by
+            <a href="https://github.com/sandrarampal" target="_blank"
+              >Sandra Rampal</a
+            >
+          </p>
         </div>
-
-        <!-- RESTAURANTS -->
-
-        <div class="activities">
-          <div class="activities-intro">
-            <h4>Se restaurer</h4>
-            <p>Bistrots et bars typiques, et plus encore à Paris.</p>
-            <a href="">Tout afficher</a>
-          </div>
-          <div class="carrousel">
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img class="thepic" src="./assets/img/meal6.jpg" alt="" />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Frenchie</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
-                </ul>
-                <p>1274</p>
-              </div>
-              <p>€€€€ · Française, Végétariens bienvenus, Plats sans gluten</p>
-            </div>
-
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img class="thepic" src="./assets/img/meal5.jpg" alt="" />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>114 Faubourg</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
-                  <li><i class="fa-regular fa-circle"></i></li>
-                </ul>
-                <p>1754</p>
-              </div>
-              <p>€€ · Française, Européenne, Végétariens bienvenus</p>
-            </div>
-
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img class="thepic" src="./assets/img/meal4.jpg" alt="" />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Verjus</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-regular fa-circle"></i></li>
-                </ul>
-                <p>545</p>
-              </div>
-              <p>€€€ · Française, Européenne, Moderne</p>
-            </div>
-
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img class="thepic" src="./assets/img/meal3.jpg" alt="" />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>ASPIC</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
-                  <li><i class="fa-regular fa-circle"></i></li>
-                </ul>
-                <p>2 981</p>
-              </div>
-              <p>€€€€ · Française, Européenne, Saine</p>
-            </div>
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img class="thepic" src="./assets/img/meal2.jpg" alt="" />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Bistrot chic</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                </ul>
-                <p>1 345</p>
-              </div>
-              <p>€€€ · Française, Européenne, Saine, Moderne</p>
-            </div>
-            <div class="one-activity">
-              <div class="photo-activity">
-                <img class="thepic" src="./assets/img/meal1.jpg" alt="" />
-                <button><i class="fa-regular fa-heart"></i></button>
-                <div class="small-logo">
-                  <img src="./assets/img/TC LOGO_2024.webp" alt="" />
-                </div>
-              </div>
-
-              <h5>Vive les huîtres</h5>
-              <div class="ratings">
-                <ul>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle"></i></li>
-                  <li><i class="fa-solid fa-circle-half-stroke"></i></li>
-                </ul>
-                <p>4 340</p>
-              </div>
-              <p>€€€€ · Française, Moderne, Bar à vins</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="guides">
-        <h2>Guides de voyageurs</h2>
-        <div class="articles">
-          <div class="one-article">
-            <div class="article-pic">
-              <img src="./assets/img/visit1.jpg" alt="" />
-            </div>
-            <p class="title">Best summer things to do in Paris | Eatwith</p>
-            <p class="number-articles">36 articles</p>
-            <div class="author">
-              <img src="./assets/img/forks-icon.jpg" alt="" />
-              <p>Par <span>Eatwith</span></p>
-            </div>
-          </div>
-          <div class="one-article">
-            <div class="article-pic">
-              <img src="./assets/img/visit2.jpg" alt="" />
-            </div>
-            <p class="title">Les 10 monuments et musées de Paris à faire</p>
-            <p class="number-articles">10 articles</p>
-            <div class="author">
-              <img class="topito" src="./assets/img/topito-com.jpg" alt="" />
-              <p>Par <span>Topito</span></p>
-            </div>
-          </div>
-          <div class="one-article">
-            <div class="article-pic">
-              <img src="./assets/img/visit3.jpg" alt="" />
-            </div>
-            <p class="title">
-              Top 10 des choses à faire ou à voir dans le 14ème
-            </p>
-            <p class="number-articles">10 articles</p>
-            <div class="author">
-              <img class="topito" src="./assets/img/topito-com.jpg" alt="" />
-              <p>Par <span>Topito</span></p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div>
-        <img src="./assets/img/TRIP-2af5b8e6.png" alt="" />
-        <p>
-          Made at
-          <a href="https://www.lereacteur.io/" target="_blank">Le Reacteur</a>
-          by
-          <a href="https://github.com/sandrarampal" target="_blank"
-            >Sandra Rampal</a
-          >
-        </p>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

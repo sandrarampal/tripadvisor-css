@@ -38,11 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // console.log({ firstname, lastname, email, message });
 
-    const response = await axios.post("http://localhost:3000/form", {
-      firstname,
-      lastname,
-      email,
-      message,
-    });
+    const response = await axios.post(
+      "https://site--mailer-tripadvisor--96jcjn4jx467.code.run/",
+      {
+        firstname,
+        lastname,
+        email,
+        message,
+      }
+    );
   });
 });

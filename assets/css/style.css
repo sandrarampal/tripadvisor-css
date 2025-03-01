@@ -680,7 +680,7 @@ footer div img {
 }
 
 footer div {
-  height: 156px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

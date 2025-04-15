@@ -1,7 +1,7 @@
 
 # Trip Advisor Page
 
-Reproduction d'une page Trip Advisor, responsive avec HTML et CSS
+Reproduction d'une page Trip Advisor, responsive avec HTML et CSS, réalisée dans le cadre de la formation du Reacteur
 
 
 
